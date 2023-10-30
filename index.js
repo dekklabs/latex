@@ -3,7 +3,7 @@ const texSVG = require("texsvg")
 
 const app = express()
 
-const port = 3003
+const port = process.env.PORT || 3003
 
 app.get("/", async (_, res) => {
   const latexEquation = decodeURIComponent("CH_%7B2%7D%20OH%20%2B%20%5Cfrac%7B3%7D%7B2%7D%20%20O_%7B2%7D%20%20%28g%29%20%20%5Clongrightarrow%20CO_%7B2%7D%20%28g%29%20%20%2B%20H_%7B2%7D%20O%20%20%20----------%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%5CDelta%20H%C2%B0%20%3D-762%20kJ%2Fmol");
